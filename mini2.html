@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop</title>
+
+  <!-- 1. GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 2. ICONOS DE REDES (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Tarjeta principal */
+    .tarjeta {
+      background: white;
+      max-width: 350px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #ff6b6b;
+      margin-bottom: 10px;
+    }
+
+    /* Botón */
+    .btn {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Menú (Oculto al inicio) */
+    .menu {
+      display: none; /* Inicia oculto */
+      background: #ffeae1;
+      border-radius: 8px;
+      margin-top: 10px;
+      padding: 10px 0;
+    }
+
+    .menu a {
+      display: block;
+      color: #ff6b6b;
+      text-decoration: none;
+      padding: 8px;
+      font-weight: 600;
+    }
+
+    .menu a:hover {
+      background: #ffd5c4;
+    }
+
+    /* La clase "show" que activa jQuery al hacer clic */
+    .menu.show {
+      display: block;
+    }
+
+    /* Redes sociales */
+    .redes {
+      margin-top: 25px;
+    }
+
+    .redes a {
+      color: #333;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    /* 3. MEDIA QUERY SENCILLA */
+    @media (min-width: 600px) {
+      .tarjeta {
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tarjeta">
+    <i class="fa-solid fa-dog" style="font-size: 50px; color: #ff6b6b;"></i>
+    <h1>Huellitas Pet Shop</h1>
+    <p>Todo lo que tu mascota necesita.</p>
+    
+    <!-- Botón -->
+    <button class="btn">
+      <i class="fa-solid fa-bars"></i> Menú
+    </button>
+
+    <!-- Menú desplegable -->
+    <div class="menu">
+      <a href="#"><i class="fa-solid fa-bone"></i> Alimentos</a>
+      <a href="#"><i class="fa-solid fa-scissors"></i> Peluquería</a>
+      <a href="#"><i class="fa-solid fa-shield-dog"></i> Vacunas</a>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="redes">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- IMPORTANTE: Librería jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- El script-->
+  <script type="text/javascript">
+    $(".btn").on("click", function(){
+        $('.menu').toggleClass("show");
+    });
+  </script>
+
+</body>
+</html>
